@@ -4,7 +4,7 @@ pipeline {
     // }
 
     stages{
-        stage("testing on feature branch"){
+        stage('testing on feature branch') {
             steps {
                 sh "env"
                 sh "echo test is done on feature branch"

@@ -40,7 +40,7 @@ pipeline {
 
                 }
                     sh "env"
-                    sh "echo test is done on feature branch"
+                    sh "echo test  done on feature branch"
 
 
             }

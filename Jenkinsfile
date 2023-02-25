@@ -19,7 +19,7 @@ pipeline {
             }
         }
 
-        stage('testing on feature branch') {
+        stage('testing on PR branch') {
             steps {
                 when{
                 
@@ -32,7 +32,7 @@ pipeline {
 
             }
         }
-        stage('testing on feature branch') {
+        stage('testing on main branch') {
             steps {
                 when{
                 

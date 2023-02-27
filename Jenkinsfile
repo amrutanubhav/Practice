@@ -32,7 +32,7 @@ pipeline {
 
             }
         }
-<<<<<<< HEAD
+<<<<<<< HEADgit 
         stage('testing on MAin branch') {
 =======
         stage('testing on main branch') {

@@ -19,7 +19,7 @@ pipeline {
             }
         }
 
-        stage('testing on feature branch') {
+        stage('testing on PR branch') {
             steps {
                 when{
                 
@@ -32,7 +32,7 @@ pipeline {
 
             }
         }
-        stage('testing on feature branch') {
+        stage('testing on main branch') {
             steps {
                 when{
                 
@@ -40,7 +40,7 @@ pipeline {
 
                 }
                     sh "env"
-                    sh "echo test is done on feature branch"
+                    sh "echo test  done on feature branch"
 
 
             }

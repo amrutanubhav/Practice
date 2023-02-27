@@ -32,7 +32,11 @@ pipeline {
 
             }
         }
+<<<<<<< HEAD
         stage('testing on MAin branch') {
+=======
+        stage('testing on main branch') {
+>>>>>>> 1cfe6986eb59b347d27652d2c94311102798bfca
             steps {
                 when{
                 
@@ -40,7 +44,7 @@ pipeline {
 
                 }
                     sh "env"
-                    sh "echo test is done on feature branch"
+                    sh "echo test  done on feature branch"
 
 
             }

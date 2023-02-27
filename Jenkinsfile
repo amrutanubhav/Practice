@@ -32,7 +32,7 @@ pipeline {
 
             }
         }
-        stage('testing on main branch') {
+        stage('testing on MAIN branch') {
             steps {
                 when{
                 

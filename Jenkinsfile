@@ -5,9 +5,9 @@ pipeline {
         }
 
     stages{
-        when { branch pattern: "feature/.*", comparator: "REGEXP" }
+        
         stage('testing on feature branch') {
-            
+            when { branch pattern: "feature/.*", comparator: "REGEXP" }
             steps {
                     sh "env"
                     sh "echo test is done on feature branch"

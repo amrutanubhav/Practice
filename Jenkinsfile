@@ -23,19 +23,19 @@ pipeline {
             }
         }
 
-        // stage('testing on MAin branch') {
-        //     steps {
-        //         when{
+        stage('testing on MAin branch') {
+            steps {
+                when{
                 
-        //             branch 'main'
+                    branch 'main'
 
-        //         }
-        //             sh "env"
-        //             sh "echo test  done on feature branch"
+                }
+                    sh "env"
+                    sh "echo test  done on feature branch"
 
 
-        //     }
-        // }      
+            }
+        }      
            
     }
 }

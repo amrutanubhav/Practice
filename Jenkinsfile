@@ -7,11 +7,11 @@ pipeline {
     stages{
         stage('testing on feature branch') {
             steps {
-                // when{
+                when{
                 
-                //     branch pattern: "feature-.*", comparator: "REGEXP"
+                    branch pattern: "feature-.*", comparator: "REGEXP"
 
-                // }
+                }
                     sh "env"
                     sh "echo test is done on feature branch"
 
@@ -21,11 +21,11 @@ pipeline {
 
         stage('testing on PR branch') {     
             steps {
-                // when{
+                when{
                 
-                //     branch pattern: "PR-.*", comparator: "REGEXP"  
+                    branch pattern: "PR-.*", comparator: "REGEXP"  
 
-                // }
+                }
                     sh "ansible-playbook -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW} -e COMPONENT=Mongodb -e ENV=dev robot-testrun.yml"
                     sh "echo test is done on feature branch"
 

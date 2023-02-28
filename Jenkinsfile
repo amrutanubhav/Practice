@@ -32,7 +32,11 @@ pipeline {
 
             }
         }
+<<<<<<< HEAD
         stage('testing on MAIN branch') {
+=======
+        stage('testing on MAin branch') {
+>>>>>>> 59e65779cc6d21ce9f760f5a5be9d1b320c0d405
             steps {
                 when{
                 

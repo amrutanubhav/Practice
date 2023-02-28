@@ -9,7 +9,7 @@ pipeline {
             steps {
                 when{
                 
-                    branch pattern: "feature-.*", comparator: "REGEXP"
+                    branch pattern: "feature/.*", comparator: "REGEXP"
 
                 }
                     sh "env"

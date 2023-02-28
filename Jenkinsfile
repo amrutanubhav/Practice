@@ -19,11 +19,11 @@ pipeline {
             }
         }
 
-        stage('testing on PR branch') {
+        stage('testing on PR branch') {     
             steps {
                 when{
                 
-                    branch pattern: "PR-.*", comparator: "REGEXP"
+                    branch pattern: "PR-.*", comparator: "REGEXP"  
 
                 }
                     sh "ansible-playbook -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW} -e COMPONENT=Mongodb -e ENV=dev robot-testrun.yml"
@@ -48,3 +48,5 @@ pipeline {
            
     }
 }
+
+// test to check 

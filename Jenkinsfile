@@ -5,6 +5,7 @@ pipeline {
         }
 
     stages{
+        
         stage('testing on feature branch') {
             when { branch pattern: "feature/.*", comparator: "REGEXP" }
             steps {
@@ -15,28 +16,29 @@ pipeline {
         }
 
         stage('testing on PR branch') {    
-            when { branch pattern: "PR-.*", comparator: "REGEXP" } 
+            // when { branch pattern: "PR-.*", comparator: "REGEXP" } 
             steps {
                     sh "ansible-playbook robot-testrun.yml -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW} -e COMPONENT=mongodb -e ENV=dev"
                     sh "echo test is done on feature branch"
+<<<<<<< HEAD
                     sh "tetsif"
+=======
+                    sh "testing"
+>>>>>>> df8d315da7bd281ec3907b7166b9c87fa7c6da0c
 
             }
         }
 
-        // stage('testing on MAin branch') {
-        //     steps {
-        //         when{
+        stage('testing on MAin branch') {
+            when{ branch 'main' }
+            steps {
                 
-        //             branch 'main'
-
-        //         }
-        //             sh "env"
-        //             sh "echo test  done on feature branch"
+                    sh "env"
+                    sh "echo test  done on feature branch"
 
 
-        //     }
-        // }      
+            }
+        }      
            
     }
 }

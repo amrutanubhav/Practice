@@ -20,7 +20,7 @@ pipeline {
             steps {
                     // sh "ansible-playbook robot-testrun.yml -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW} -e COMPONENT=mongodb -e ENV=dev"
                     sh "echo test is done on PR branch"
-                    sh "tetsif"
+                    // sh "tetsif"
 
             }
         }
@@ -31,7 +31,7 @@ pipeline {
             steps {
                     // sh "ansible-playbook robot-testrun.yml -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW} -e COMPONENT=mongodb -e ENV=dev"
                     sh "echo test is done on tag branch"
-                    sh "tetsif"
+                    // sh "tetsif"
 
             }
         }
@@ -42,7 +42,7 @@ pipeline {
             steps {
                 
                     sh "env"
-                    sh "echo test  done on feature branch"
+                    sh "echo test  done on main branch"
 
 
             }

@@ -26,7 +26,7 @@ pipeline {
         }
 
         stage('testing on TAg branch') {    
-            when { tag pattern: ".*", comparator: "REGEXP" }
+            // when { tag pattern: ".*", comparator: "REGEXP" }
             when { expression{ env.TAG_NAME ==~ ".*" } }
             steps {
                     // sh "ansible-playbook robot-testrun.yml -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW} -e COMPONENT=mongodb -e ENV=dev"

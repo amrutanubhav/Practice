@@ -20,11 +20,7 @@ pipeline {
             steps {
                     sh "ansible-playbook robot-testrun.yml -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW} -e COMPONENT=mongodb -e ENV=dev"
                     sh "echo test is done on feature branch"
-<<<<<<< HEAD
                     sh "tetsif"
-=======
-                    sh "testing"
->>>>>>> df8d315da7bd281ec3907b7166b9c87fa7c6da0c
 
             }
         }
